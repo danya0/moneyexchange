@@ -1,0 +1,14 @@
+@mixin container($cw, $p)
+  .container
+    margin: 0 auto
+    max-width: $cw
+    padding: $p 15px
+@mixin fontFace($fn, $url, $fw, $fs)
+  @font-face 
+    font-family: $fn
+    src: $url
+    font-weight: $fw
+    font-style: $fs
+@mixin font($fn)
+  body
+    font-family: $fn, sans-serif
