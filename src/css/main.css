@@ -76,6 +76,18 @@ body {
           flex-basis: 25%;
 }
 
+@media (max-width: 768px) {
+  .header-block:first-child {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .header-block:nth-child(2) {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
@@ -85,20 +97,16 @@ body {
 
 @media (max-width: 768px) {
   .header-block:nth-child(2) {
-    -webkit-flex-basis: 58%;
-        -ms-flex-preferred-size: 58%;
-            flex-basis: 58%;
-    -webkit-justify-content: space-around;
-        -ms-flex-pack: distribute;
-            justify-content: space-around;
-  }
-}
-
-@media (max-width: 500px) {
-  .header-block:nth-child(2) {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
             flex-basis: 100%;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
   }
 }
 
@@ -115,33 +123,21 @@ body {
 
 @media (max-width: 768px) {
   .header-block:last-child {
-    -webkit-flex-basis: 40%;
-        -ms-flex-preferred-size: 40%;
-            flex-basis: 40%;
-  }
-}
-
-@media (max-width: 500px) {
-  .header-block:last-child {
-    -webkit-flex-basis: 100%;
-        -ms-flex-preferred-size: 100%;
-            flex-basis: 100%;
-    -webkit-justify-content: space-around;
-        -ms-flex-pack: distribute;
-            justify-content: space-around;
+    display: none;
+    text-align: center;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
   }
 }
 
 @media (max-width: 768px) {
   .header-block {
+    margin-bottom: 25px;
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
             flex-basis: 100%;
-    margin-bottom: 25px;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 }
 
@@ -186,4 +182,13 @@ body {
 
 .header__button:hover {
   background-color: rgba(161, 127, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .header__profile {
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    right: 5%;
+  }
 }

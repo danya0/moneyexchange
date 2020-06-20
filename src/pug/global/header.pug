@@ -2,13 +2,17 @@ mixin header()
   header.header-wrap
     .container
       .header
-        a(href="#").header-block
-          img(src="img/header/logo.svg", alt="logo").header__logo
-          .header__logo-title <span>meonyex</span>change
+        .header-block
+          a(href="#")
+            img(src="img/header/logo.svg", alt="logo").header__logo
+          a(href="#")
+            .header__logo-title <span>meonyex</span>change
+          .header__profile#header-profile-btn
+            img(src="img/header/user.svg", alt="profile")
         .header-block
           a(href="#").header__item Компания
           a(href="#").header__item Блок
           a(href="#").header__item Контакты
-        .header-block
+        .header-block#header-profile-block
           a(href="#").header__item Вход
           button.button.header__button Регистрация

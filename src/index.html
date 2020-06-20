@@ -11,10 +11,13 @@
   <body>
     <header class="header-wrap">
       <div class="container">
-        <div class="header"><a class="header-block" href="#"><img class="header__logo" src="img/header/logo.svg" alt="logo"/>
-            <div class="header__logo-title"><span>meonyex</span>change</div></a>
+        <div class="header">
+          <div class="header-block"><a href="#"><img class="header__logo" src="img/header/logo.svg" alt="logo"/></a><a href="#">
+              <div class="header__logo-title"><span>meonyex</span>change</div></a>
+            <div class="header__profile" id="header-profile-btn"><img src="img/header/user.svg" alt="profile"/></div>
+          </div>
           <div class="header-block"><a class="header__item" href="#">Компания</a><a class="header__item" href="#">Блок</a><a class="header__item" href="#">Контакты</a></div>
-          <div class="header-block"><a class="header__item" href="#">Вход</a>
+          <div class="header-block" id="header-profile-block"><a class="header__item" href="#">Вход</a>
             <button class="button header__button">Регистрация</button>
           </div>
         </div>
@@ -25,6 +28,7 @@
         <h2>Я футер</h2>
       </div>
     </footer>
+    <script src="js/lib/jquery-3.5.1.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -8,26 +8,27 @@
     display: flex
     align-items: center
     flex-basis: 25%
+    &:first-child
+      @include w-tablet()
+        flex-basis: 100%
+        justify-content: center
     &:nth-child(2)
       justify-content: space-between
       @include w-tablet()
-        flex-basis: 58%
-        justify-content: space-around
-      @include w-mobile()
+        order: 2
         flex-basis: 100%
+        justify-content: space-around
     &:last-child
       justify-content: flex-end
       & .header__item
         margin-right: 20px
       @include w-tablet()
-        flex-basis: 40%
-      @include w-mobile()
-        flex-basis: 100%
-        justify-content: space-around
+        display: none
+        text-align: center
+        order: 1
     @include w-tablet()
-      flex-basis: 100%
       margin-bottom: 25px
-      justify-content: center
+      flex-basis: 100%
 
   &__logo
     margin-right: 15px
@@ -54,3 +55,9 @@
     transition: 0.3s
     &:hover
       background-color: rgba(#A17FFF, .3)
+  &__profile
+    @include w-tablet()
+      height: 24px
+      width: 24px
+      position: absolute
+      right: 5%  

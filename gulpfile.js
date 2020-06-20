@@ -9,6 +9,7 @@ const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
 const webpackConfig = require('./webpack.config.js');
 const webpackBuildConfig = require('./webpack-build.config.js');
+const plumber = require('gulp-plumber');
 
 // ! Develop scripts ======================================== * //
 gulp.task('sass', function () {
@@ -38,6 +39,7 @@ gulp.task('pug', function buildHTML() {
 
 gulp.task('js', (done) => {
 	gulp.src('src/js/index.js')
+		.pipe(plumber())
 		.pipe(webpackStream(webpackConfig), webpack)
 		.pipe(gulp.dest('src/js/'))
 		.pipe(browserSync.stream());
