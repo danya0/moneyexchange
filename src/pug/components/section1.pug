@@ -1,0 +1,33 @@
+mixin section1()
+  section.section.section1
+    .container
+      h1 Мультивалютный обменный сервис 24/7
+      h3 Быстрый обмен без скрытых комиссий
+      form.form#currency-form
+        .form-colum
+          .form-row
+            p.form__row-name Вы отдаете
+          .form-row
+            p.form__sum Сумма
+            .form-input-block
+              input(type="text" value="222.00")
+              select(name="currency")
+                option(value="currency1") RUB
+                option(value="currency2") USD
+                option(value="currency3") EUR
+        .form__trade-icon
+          img(src="", alt="").form__trade-arrow
+          img(src="", alt="").form__trade-arrow
+        .form-colum
+          .form-row
+            p.form__row-name Вы получаете
+            span.form__row-name-small с учетом комиссии ПС (0.5 %)
+          .form-row
+            p.form__sum Сумма
+            .form-input-block
+              input(type="text" value="222.00")
+              select(name="currency")
+                option(value="currency1") RUB
+                option(value="currency2") USD
+                option(value="currency3") EUR
+        input(type="button", value="Обменять").form__button
