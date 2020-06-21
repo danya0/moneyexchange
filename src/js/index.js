@@ -1,2 +1,2 @@
-import newAlert from './modules/newAlert';
-newAlert();
+import header from './modules/header';
+header();

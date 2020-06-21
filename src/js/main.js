@@ -94,19 +94,19 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_newAlert__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/newAlert */ \"./src/js/modules/newAlert.js\");\n\nObject(_modules_newAlert__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/header */ \"./src/js/modules/header.js\");\n\nObject(_modules_header__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ }),
 
-/***/ "./src/js/modules/newAlert.js":
-/*!************************************!*\
-  !*** ./src/js/modules/newAlert.js ***!
-  \************************************/
+/***/ "./src/js/modules/header.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/header.js ***!
+  \**********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  var button = $('#header-profile-btn'),\n      block = $('#header-profile-block');\n  button.click(function () {\n    block.slideToggle();\n  });\n  $(window).resize(function () {\n    if (window.innerWidth >= 768) {\n      block.css('display', '');\n    }\n  });\n});\n\n//# sourceURL=webpack:///./src/js/modules/newAlert.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  var button = $('#header-profile-btn'),\n      block = $('#header-profile-block');\n  button.click(function () {\n    block.slideToggle();\n  });\n  $(window).resize(function () {\n    if (window.innerWidth >= 768) {\n      block.css('display', '');\n    }\n  });\n});\n\n//# sourceURL=webpack:///./src/js/modules/header.js?");
 
 /***/ })
 
