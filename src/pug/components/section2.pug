@@ -1,0 +1,18 @@
+mixin section2()
+  mixin advBlock(image, title, descr)
+      .advantages-block
+        img(src=image, alt="advantage").advantages-block__img
+        .advantages__title= title
+        .advantages__descr= descr
+  section.section.section2
+    .container
+      .advantages
+        +advBlock('img/2/1.png', 'Безопасность', 'Усиленная безопасность ваших обменов, усиленная безопасность от мошенников!')
+        +advBlock('img/2/2.png', 'Реферальная система', 'На сервисе работает партнерская программа , за каждый обмен приведенного вами клиента, вы получаете 0.5% с нашей прибыли.')
+        +advBlock('img/2/2.png', 'Онлайн поддержка', 'Четыре вида поддержки для наших клиентов:  Телеграмм канал, E-mail поддержка, и мобильный номер (Viber).')
+      .advantage
+        .advantage-text
+          .advantage__title Сервис обмена электронных валют с 5-летней историей
+          .advantage__descr За время работы мы приобрели репутацию проверенного партнера и делаем все возможное, чтобы ваши впечатления от нашего сервиса были только благоприятными.
+        img(src="img/2/advantage.png", alt="advantage").advantage__img
+
