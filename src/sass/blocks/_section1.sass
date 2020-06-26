@@ -1,0 +1,158 @@
+.section1
+  padding-top: 120px
+  padding-bottom: 85px
+  background: url('/img/1/bg.jpg') center no-repeat
+  background-size: cover
+  @include w-mobile
+    padding-top: 50px
+    padding-bottom: 30px
+  &__title
+    margin: 0 auto
+    font-size: 55px
+    font-weight: bold
+    color: #ffffff
+    text-align: center
+    max-width: 833px
+    margin-bottom: 40px
+    @include w-mobile
+      font-size: 30px
+  &__subtitle
+    margin: 0 auto
+    text-align: center
+    font-weight: normal
+    font-size: 19px
+    color: #ffffff
+    margin-bottom: 55px
+
+.form
+  &-main
+    background-color: #fff
+    opacity: 0.8
+    border-radius: 26px
+    padding: 70px 85px 80px 105px
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    flex-wrap: wrap
+    @include w-laptop
+      flex-direction: column
+      padding: 10px
+      align-items: center
+    &::before
+      content: ''
+      position: absolute
+      background-color: #fff
+      opacity: 0.2
+      border-radius: 0px 0px 26px 26px
+      height: 20px
+      width: 80%
+      left: 50%
+      transform: translateX(-50%)
+      bottom: -20px
+    &::after
+      content: ''
+      position: absolute
+      background-color: #fff
+      opacity: 0.2
+      border-radius: 0px 0px 26px 26px
+      height: 38px
+      width: 65%
+      left: 50%
+      transform: translateX(-50%)
+      bottom: -38px
+  &-colum
+    flex-basis: 35%
+    @include w-laptop
+      margin-bottom: 20px
+  &__trade-icon
+    display: flex
+    flex-direction: column
+    transform: translateY(-13px)
+    @include w-laptop
+      display: none
+    & img:last-child
+      transform: rotateZ(180deg)
+  &__name
+    display: inline-block
+    font-weight: 500
+    font-size: 22px
+    color: $mainColor
+    margin-right: 8px
+    vertical-align: middle
+    &-small
+      font-size: 13px
+      opacity: 0.5
+  &__sum
+    font-size: 16px
+    opacity: 0.5
+  &-input-block
+    display: flex
+    justify-content: space-between
+    & input
+      font-size: 25px
+      width: 55%
+      border: none
+      background-color: transparent
+      border-right: 1px solid #cfd4da
+    &__select
+      width: 40%
+      position: relative
+  &__button
+    transform: translateY(-13px)
+    padding: 20px 40px
+    border-radius: 9px
+    background: linear-gradient(163.94deg, #562EC2 29.59%, #A07EFE 73.59%)
+    border: none
+    color: #ffffff
+    font-weight: bold
+    font-size: 14px
+    @include w-laptop
+      transform: none
+
+.select
+  &_active .select__body
+    display: block
+  &__header
+    display: flex
+    cursor: pointer
+    position: relative
+    transition: 0.3s
+  &__current
+    padding: 8px
+  &__icon
+    position: absolute
+    top: 50%
+    right: 10px
+    width: 20px
+    height: 20px
+    transform: translateY(-50%) rotateZ(90deg) 
+    transition: 0.3s
+    @include w-320
+      display: none
+    &_active
+      transform: translateY(-50%) rotateZ(270deg) 
+  &-item
+    display: flex
+    align-items: center
+    font-size: 18px
+    padding: 10px 0
+    padding-left: 7px
+    cursor: pointer
+    &-current
+      display: flex
+      align-items: center
+    &__icon
+      margin-right: 18px
+    &:hover
+      background-color: rgba($mainColor, 0.1)
+  &__body
+    display: none
+    position: absolute
+    z-index: 2
+    left: 0
+    right: 0
+    top: 100%
+    background-color: #fff
+    border: 1px solid $mainColor
+    border-top: none

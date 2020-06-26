@@ -1,33 +1,51 @@
 mixin section1()
+  mixin selectItem(img, text)
+    .select-item
+      img(src=img, alt=text).select-item__icon
+      span= text
   section.section.section1
     .container
-      h1 Мультивалютный обменный сервис 24/7
-      h3 Быстрый обмен без скрытых комиссий
-      form.form#currency-form
+      h1.section1__title Мультивалютный обменный сервис 24/7
+      h3.section1__subtitle Быстрый обмен без скрытых комиссий
+      form.form-main#currency-form
         .form-colum
           .form-row
-            p.form__row-name Вы отдаете
+            p.form__name Вы отдаете
           .form-row
             p.form__sum Сумма
             .form-input-block
-              input(type="text" value="222.00")
-              select(name="currency")
-                option(value="currency1") RUB
-                option(value="currency2") USD
-                option(value="currency3") EUR
+              input(type="text" value="100.00")
+              .form-input-block__select(selectId="0")
+                .select__header
+                  .select__current
+                    .select-item-current
+                      img(src="img/1/rub.png", alt="rub").select-item__icon
+                      span RUB
+                img.select__icon(src="img/1/select-arrow.svg", alt="arrow")
+                .select__body
+                  +selectItem('img/1/rub.png', 'RUB')
+                  +selectItem('img/1/rub.png', 'USD')
+                  +selectItem('img/1/rub.png', 'EUR')
         .form__trade-icon
-          img(src="", alt="").form__trade-arrow
-          img(src="", alt="").form__trade-arrow
+          img(src="img/1/arrow.svg", alt="arrow").form__trade-arrow
+          img(src="img/1/arrow.svg", alt="arrow").form__trade-arrow
         .form-colum
           .form-row
-            p.form__row-name Вы получаете
-            span.form__row-name-small с учетом комиссии ПС (0.5 %)
+            p.form__name Вы получаете
+            span.form__name-small с учетом комиссии ПС (0.5 %)
           .form-row
             p.form__sum Сумма
             .form-input-block
-              input(type="text" value="222.00")
-              select(name="currency")
-                option(value="currency1") RUB
-                option(value="currency2") USD
-                option(value="currency3") EUR
-        input(type="button", value="Обменять").form__button
+              input(type="text" value="0" disabled="true")
+              .form-input-block__select(selectId="1")
+                .select__header
+                  .select__current
+                    .select-item-current
+                      img(src="img/1/rub.png", alt="rub").select-item__icon
+                      span USD
+                img.select__icon(src="img/1/select-arrow.svg", alt="arrow")
+                .select__body
+                  +selectItem('img/1/rub.png', 'RUB')
+                  +selectItem('img/1/rub.png', 'USD')
+                  +selectItem('img/1/rub.png', 'EUR')
+        input.form__button(type="button", value="Обменять")

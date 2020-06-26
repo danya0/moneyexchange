@@ -26,39 +26,53 @@
     <main>
       <section class="section section1">
         <div class="container">
-          <h1>Мультивалютный обменный сервис 24/7</h1>
-          <h3>Быстрый обмен без скрытых комиссий</h3>
-          <form class="form" id="currency-form">
+          <h1 class="section1__title">Мультивалютный обменный сервис 24/7</h1>
+          <h3 class="section1__subtitle">Быстрый обмен без скрытых комиссий</h3>
+          <form class="form-main" id="currency-form">
             <div class="form-colum">
               <div class="form-row">
-                <p class="form__row-name">Вы отдаете</p>
+                <p class="form__name">Вы отдаете</p>
               </div>
               <div class="form-row">
                 <p class="form__sum">Сумма</p>
                 <div class="form-input-block">
-                  <input type="text" value="222.00"/>
-                  <select name="currency">
-                    <option value="currency1">RUB</option>
-                    <option value="currency2">USD</option>
-                    <option value="currency3">EUR</option>
-                  </select>
+                  <input type="text" value="100.00"/>
+                  <div class="form-input-block__select" selectId="0">
+                    <div class="select__header">
+                      <div class="select__current">
+                        <div class="select-item-current"><img class="select-item__icon" src="img/1/rub.png" alt="rub"/><span>RUB</span></div>
+                      </div>
+                    </div><img class="select__icon" src="img/1/select-arrow.svg" alt="arrow"/>
+                    <div class="select__body">
+                      <div class="select-item"><img class="select-item__icon" src="img/1/rub.png" alt="RUB"/><span>RUB</span></div>
+                      <div class="select-item"><img class="select-item__icon" src="img/1/rub.png" alt="USD"/><span>USD</span></div>
+                      <div class="select-item"><img class="select-item__icon" src="img/1/rub.png" alt="EUR"/><span>EUR</span></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="form__trade-icon"><img class="form__trade-arrow" src="" alt=""/><img class="form__trade-arrow" src="" alt=""/></div>
+            <div class="form__trade-icon"><img class="form__trade-arrow" src="img/1/arrow.svg" alt="arrow"/><img class="form__trade-arrow" src="img/1/arrow.svg" alt="arrow"/></div>
             <div class="form-colum">
               <div class="form-row">
-                <p class="form__row-name">Вы получаете</p><span class="form__row-name-small">с учетом комиссии ПС (0.5 %)</span>
+                <p class="form__name">Вы получаете</p><span class="form__name-small">с учетом комиссии ПС (0.5 %)</span>
               </div>
               <div class="form-row">
                 <p class="form__sum">Сумма</p>
                 <div class="form-input-block">
-                  <input type="text" value="222.00"/>
-                  <select name="currency">
-                    <option value="currency1">RUB</option>
-                    <option value="currency2">USD</option>
-                    <option value="currency3">EUR</option>
-                  </select>
+                  <input type="text" value="0" disabled="true"/>
+                  <div class="form-input-block__select" selectId="1">
+                    <div class="select__header">
+                      <div class="select__current">
+                        <div class="select-item-current"><img class="select-item__icon" src="img/1/rub.png" alt="rub"/><span>USD</span></div>
+                      </div>
+                    </div><img class="select__icon" src="img/1/select-arrow.svg" alt="arrow"/>
+                    <div class="select__body">
+                      <div class="select-item"><img class="select-item__icon" src="img/1/rub.png" alt="RUB"/><span>RUB</span></div>
+                      <div class="select-item"><img class="select-item__icon" src="img/1/rub.png" alt="USD"/><span>USD</span></div>
+                      <div class="select-item"><img class="select-item__icon" src="img/1/rub.png" alt="EUR"/><span>EUR</span></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
