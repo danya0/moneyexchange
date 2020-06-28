@@ -389,6 +389,14 @@ body {
   color: #ffffff;
   font-weight: bold;
   font-size: 14px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  position: relative;
+}
+
+.form__button:hover {
+  cursor: pointer;
 }
 
 @media (max-width: 1024px) {
