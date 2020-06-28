@@ -28,6 +28,12 @@ body {
   cursor: pointer;
 }
 
+.section-title {
+  font-size: 35px;
+  color: #160647;
+  font-weight: 500;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1240px;
@@ -502,6 +508,7 @@ body {
 .section2 {
   padding-top: 120px;
   position: relative;
+  z-index: 2;
 }
 
 .section2::before {
@@ -675,6 +682,119 @@ body {
 }
 
 .section3 {
-  height: 500px;
-  background-color: plum;
+  padding-top: 423px;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .section3 {
+    padding-top: 170px;
+  }
+}
+
+.section3::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 650px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#EFF2FA), color-stop(96.57%, rgba(255, 255, 255, 0)));
+  background: -o-linear-gradient(top, #EFF2FA 0%, rgba(255, 255, 255, 0) 96.57%);
+  background: linear-gradient(180deg, #EFF2FA 0%, rgba(255, 255, 255, 0) 96.57%);
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.section3 .container {
+  z-index: 2;
+}
+
+.section3__title {
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .section3__title {
+    margin-bottom: 30px;
+  }
+}
+
+.money-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.money-item {
+  -webkit-flex-basis: 24%;
+      -ms-flex-preferred-size: 24%;
+          flex-basis: 24%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 85px;
+}
+
+@media (max-width: 1024px) {
+  .money-item {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-flex-basis: 49%;
+        -ms-flex-preferred-size: 49%;
+            flex-basis: 49%;
+  }
+}
+
+@media (max-width: 500px) {
+  .money-item {
+    margin-bottom: 20px;
+  }
+}
+
+.money-block {
+  width: 200px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.money__img {
+  margin-right: 32px;
+}
+
+@media (max-width: 500px) {
+  .money__img {
+    margin-right: 10px;
+  }
+}
+
+.money__name {
+  font-size: 16px;
+  color: #a4aabf;
+  margin-bottom: 8px;
+}
+
+.money__value {
+  font-size: 20px;
+  color: #160647;
 }

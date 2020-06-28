@@ -1,3 +1,20 @@
 mixin section3()
+  mixin moneyItem(img, alt, name, value)
+    .money-item
+      .money-block
+        img(src=img, alt=alt).money__img
+        .money-text
+          .money__name= name
+          .money__value= value
   section.section.section3
     .container
+      h2.section-title.section3__title Резерв валюты
+      .money-wrap
+        +moneyItem('img/3/1.png', 'yandex', 'Yandex RUB', '900549')
+        +moneyItem('img/3/2.png', 'ethereum', 'Ethereum ETH', '123')
+        +moneyItem('img/3/3.png', 'bitcoin', 'Bitcoin BTC', '0.63333439')
+        +moneyItem('img/3/4.png', 'sberbank', 'Сбербанк RUB', '142666')
+        +moneyItem('img/3/5.png', 'privat24', 'Приват 24 UAH', '172843')
+        +moneyItem('img/3/6.png', 'paypal', 'PayPal USD', '5139.58')
+        +moneyItem('img/3/7.png', 'PM', 'PM USD', '3192.22')
+        +moneyItem('img/3/8.png', 'Qiwi', 'Qiwi RUB', '99243.32')
