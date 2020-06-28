@@ -40,10 +40,14 @@
   &-block
     width: 200px
     display: flex
+    @include w-mobile
+      width: 130px
+      justify-content: center
+      text-align: center
   &__img
     margin-right: 32px
     @include w-mobile
-      margin-right: 10px
+      display: none
   &__name
     font-size: 16px
     color: #a4aabf

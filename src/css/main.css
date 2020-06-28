@@ -778,13 +778,24 @@ body {
   display: flex;
 }
 
+@media (max-width: 500px) {
+  .money-block {
+    width: 130px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+}
+
 .money__img {
   margin-right: 32px;
 }
 
 @media (max-width: 500px) {
   .money__img {
-    margin-right: 10px;
+    display: none;
   }
 }
 
