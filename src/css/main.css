@@ -646,6 +646,12 @@ body {
   }
 }
 
+@media (max-width: 500px) {
+  .advantage {
+    padding: 10px 5px;
+  }
+}
+
 .advantage-text {
   max-width: 350px;
 }
@@ -662,6 +668,12 @@ body {
   font-size: 35px;
   color: #160647;
   margin-bottom: 30px;
+}
+
+@media (max-width: 500px) {
+  .advantage__title {
+    font-size: 25px;
+  }
 }
 
 .advantage__descr {
