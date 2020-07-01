@@ -3,6 +3,8 @@ export default () => {
 		infinite: true,
 		slidesToShow: 2,
 		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 7000,
 		prevArrow:
 			'<div class="slider-arrow slider-arrow-prev"> <div class="slider-arrow__line slider-arrow-prev__line"></div> </div>',
 		nextArrow:
@@ -12,8 +14,6 @@ export default () => {
 				breakpoint: 780,
 				settings: {
 					slidesToShow: 1,
-					autoplay: true,
-					autoplaySpeed: 7000,
 				},
 			},
 		],
