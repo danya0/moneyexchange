@@ -1,4 +1,18 @@
 mixin footer()
   footer.footer
     .container
-      h2 Я футер
+      .footer-wrap
+        .footer-block
+          .footer-logo
+            a(href="#")
+              img(src="img/header/logo.svg", alt="logo").header__logo
+            a(href="#").header__logo-title <span>meonyex</span>change
+          .footer__subtitle Сервис обмена электронных валют
+        .footer-block
+          a(href="#").footer__item Карта сайта
+          a(href="#").footer__item Предупреждение
+          a(href="#").footer__item Правила сайта
+          a(href="#").footer__item Обмен
+        .footer-block
+          a(href="http://vk.com/da.nya0").footer__link
+          a(href="http://instagram.com/da.nya0").footer__link

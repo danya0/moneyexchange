@@ -1,0 +1,53 @@
+.footer
+  padding-top: 150px
+  @include w-tablet
+    padding-top: 70px
+  &-wrap
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    @include w-tablet
+      flex-direction: column
+      align-items: center
+  &-logo
+    margin-bottom: 15px
+  &__subtitle
+    font-size: 14px
+    color: #838BA8
+  &-block
+    display: flex
+    @include w-tablet
+      margin-bottom: 20px
+    &:nth-child(1)
+      flex-direction: column
+      flex-basis: 20%
+    &:nth-child(2)
+      padding-top: 5px
+      flex-basis: 44%
+      justify-content: space-between
+      @include w-mobile
+        flex-direction: column
+    &:nth-child(3)
+      flex-basis: 10%
+      justify-content: flex-end
+  &__item
+    cursor: pointer
+    font-size: 14px
+    color: #4e5983
+    @include w-tablet
+      margin: 0 5px
+    @include w-mobile
+      text-align: center
+      margin: 5px 0
+  &__link
+    width: 28px
+    height: 28px
+    border-radius: 3px
+    margin: 0px 10px
+    &:first-child
+      background: url('../img/footer/vk.svg') center no-repeat
+      background-size: cover
+    &:last-child
+      margin-right: 0
+      background: url('../img/footer/inst.svg') center no-repeat
+      background-size: cover
