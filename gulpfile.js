@@ -64,7 +64,7 @@ gulp.task('serve', function (done) {
 
 // ! Build scripts ======================================== * //
 gulp.task('b-img', (done) => {
-	gulp.src('src/img/*').pipe(imagemin()).pipe(gulp.dest('dist/img'));
+	gulp.src('src/img/**/*').pipe(imagemin()).pipe(gulp.dest('dist/img/'));
 	done();
 });
 gulp.task('b-css', function () {
@@ -77,9 +77,14 @@ gulp.task('b-js', (done) => {
 	gulp.src('src/js/index.js')
 		.pipe(webpackStream(webpackBuildConfig), webpack)
 		.pipe(gulp.dest('dist/js/'));
+	gulp.src('src/js/lib/*').pipe(gulp.dest('dist/js/lib/'));
+	done();
+});
+gulp.task('b-html', (done) => {
+	gulp.src('src/*.html').pipe(gulp.dest('dist'));
 	done();
 });
 
 // * Сборки gulp
 gulp.task('develop', gulp.series('sass', 'pug', 'serve', 'js'));
-gulp.task('build', gulp.series('b-css', 'b-img', 'b-js'));
+gulp.task('build', gulp.series('b-html', 'b-css', 'b-img', 'b-js'));
