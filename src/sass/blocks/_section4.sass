@@ -1,0 +1,135 @@
+.section4
+  &__title
+    margin-bottom: 115px
+    @include w-tablet
+      text-align: center
+      margin-bottom: 50px
+
+.slider
+  margin-bottom: 140px
+  position: relative
+  &__item
+  &__text
+    color: #4E5983
+    opacity: 0.7
+    font-size: 18px
+    height: 120px
+    max-width: 450px
+    @include w-tablet
+      max-width: 100%
+      text-align: center
+    @include w-320
+      height: 140px
+  &-block
+    display: flex
+    align-items: center
+    @include w-tablet
+      justify-content: center
+  &__name
+    color: #160647
+    font-size: 20px
+    margin-right: 30px
+    font-weight: 500
+  &__date
+    color: #838BA8
+    font-size: 14px
+  &-arrow
+    position: absolute
+    right: 0
+    bottom: -45px
+    transition: 0.3s
+    height: 20px
+    width: 100px
+    display: flex
+    align-items: center
+    &__line
+      height: 3px
+      opacity: 0.6
+      position: relative
+      transition: 0.3s
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        transform: translateY(-42%)
+        border: 10px solid transparent
+    &-prev
+      right: 30px
+      cursor: pointer
+      &:hover .slider-arrow-prev__line
+        opacity: 0.9
+        background-color: #A17FFF
+        width: 70px
+      &:hover .slider-arrow-prev__line::before
+        border-right-color: #A17FFF
+      &__line
+        width: 36px
+        background-color: #c4c4c4
+        border-radius: 0 2px 2px 0
+        &::before
+          left: -20px
+          border-right-color: #c4c4c4
+    &-next
+      cursor: pointer
+      display: flex
+      justify-content: flex-end
+      &:hover .slider-arrow-next__line
+        opacity: 0.9
+      &__line
+        width: 70px
+        background-color: #A17FFF
+        border-radius: 2px 0 0 2px
+        &_small
+          width: 37px
+        &::before
+          right: -20px
+          border-left-color: #A17FFF
+
+.banner
+  position: relative
+  background: linear-gradient(163.51deg, #562EC2 29.59%, #A07EFE 73.59%)
+  opacity: 0.8
+  border-radius: 17px
+  padding-top: 64px
+  padding-bottom: 80px
+  padding-left: 639px
+  box-shadow: 0 60px 60px -30px #9F7DFD
+  @include w-laptop
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
+    padding: 64px 10px
+  
+  &__img
+    position: absolute
+    left: 30px
+    top: 50%
+    transform: rotate(-20deg) translateY(-50%)
+    @include w-laptop
+      display: none
+  &__title
+    font-size: 35px
+    font-weight: 500
+    color: #ffffff
+    max-width: 460px
+    margin-bottom: 20px
+    @include w-mobile
+      font-size: 25px
+  &__small
+    color: #ffffff
+    opacity: 0.7
+    font-size: 17px
+    margin-bottom: 50px
+  &__button
+    padding: 25px 35px
+    background-color: #fff
+    border-radius: 10px
+    color: #9F7DFD
+    font-size: 16px
+    font-weight: 700
+    box-shadow: 0 30px 60px -20px #ffffff
+    cursor: pointer
+    transition: 0.3s
+    &:hover
+      box-shadow: 0 30px 60px -15px #ffffff
