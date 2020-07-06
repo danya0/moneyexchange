@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/header */ \"./src/js/modules/header.js\");\n/* harmony import */ var _modules_section1__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/section1 */ \"./src/js/modules/section1.js\");\n/* harmony import */ var _modules_section4__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/section4 */ \"./src/js/modules/section4.js\");\n\n\n\nObject(_modules_header__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\nObject(_modules_section1__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\nObject(_modules_section4__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/header */ \"./src/js/modules/header.js\");\n/* harmony import */ var _modules_section1__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/section1 */ \"./src/js/modules/section1.js\");\n/* harmony import */ var _modules_section4__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/section4 */ \"./src/js/modules/section4.js\");\n/* harmony import */ var _modules_paralaxSection1__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/paralaxSection1 */ \"./src/js/modules/paralaxSection1.js\");\n\n\n\n\nObject(_modules_header__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\nObject(_modules_section1__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\nObject(_modules_section4__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\nObject(_modules_paralaxSection1__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ }),
 
@@ -107,6 +107,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  var button = $('#header-profile-btn'),\n      block = $('#header-profile-block');\n  button.click(function () {\n    block.slideToggle();\n  });\n  $(window).resize(function () {\n    if (window.innerWidth >= 768) {\n      block.css('display', '');\n    }\n  });\n});\n\n//# sourceURL=webpack:///./src/js/modules/header.js?");
+
+/***/ }),
+
+/***/ "./src/js/modules/paralaxSection1.js":
+/*!*******************************************!*\
+  !*** ./src/js/modules/paralaxSection1.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  $(window).bind('scroll', function (e) {\n    parallaxScroll();\n  });\n\n  function parallaxScroll() {\n    var scrolled = $(window).scrollTop();\n    $('.section1-bg').css('top', 0 - scrolled * 0.25 + 'px');\n\n    if (scrolled > 1000) {\n      $('.section1-bg').css('top', '');\n    }\n  }\n});\n\n//# sourceURL=webpack:///./src/js/modules/paralaxSection1.js?");
 
 /***/ }),
 
