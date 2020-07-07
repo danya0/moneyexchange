@@ -1151,6 +1151,18 @@ body {
   }
 }
 
+.banner:hover .banner__img:nth-child(2) {
+  -webkit-transform: rotate(-20deg) translateY(-50%) translateX(50px);
+      -ms-transform: rotate(-20deg) translateY(-50%) translateX(50px);
+          transform: rotate(-20deg) translateY(-50%) translateX(50px);
+}
+
+.banner:hover .banner__img:nth-child(3) {
+  -webkit-transform: rotate(-20deg) translateY(-50%) translateX(-50px);
+      -ms-transform: rotate(-20deg) translateY(-50%) translateX(-50px);
+          transform: rotate(-20deg) translateY(-50%) translateX(-50px);
+}
+
 .banner__img {
   position: absolute;
   left: 30px;
@@ -1158,6 +1170,14 @@ body {
   -webkit-transform: rotate(-20deg) translateY(-50%);
       -ms-transform: rotate(-20deg) translateY(-50%);
           transform: rotate(-20deg) translateY(-50%);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0.2;
+}
+
+.banner__img:first-child {
+  opacity: 1;
 }
 
 @media (max-width: 1024px) {

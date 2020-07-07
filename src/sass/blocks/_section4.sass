@@ -100,12 +100,20 @@
     align-items: center
     text-align: center
     padding: 64px 10px
-  
+  &:hover
+    & .banner__img:nth-child(2)
+      transform: rotate(-20deg) translateY(-50%) translateX(50px)
+    & .banner__img:nth-child(3)
+      transform: rotate(-20deg) translateY(-50%) translateX(-50px)
   &__img
     position: absolute
     left: 30px
     top: 50%
     transform: rotate(-20deg) translateY(-50%)
+    transition: 0.5s
+    opacity: 0.2
+    &:first-child
+      opacity: 1
     @include w-laptop
       display: none
   &__title
