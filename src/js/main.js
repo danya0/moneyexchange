@@ -142,7 +142,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  var images = $('.advantages-block__img');\n  $(window).scroll(function () {\n    if ($(window).scrollTop() > 400) {\n      $(images).removeClass('unvisible');\n    }\n  });\n});\n\n//# sourceURL=webpack:///./src/js/modules/section2Anim.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  var images = $('.advantages-block__img');\n  $(window).scroll(function () {\n    if ($(window).scrollTop() > 400) {\n      $(images).removeClass('unvisible');\n      setTimeout(function () {\n        images.css('transition', '0.5s');\n      }, 2500);\n    }\n  });\n});\n\n//# sourceURL=webpack:///./src/js/modules/section2Anim.js?");
 
 /***/ }),
 
