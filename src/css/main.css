@@ -37,7 +37,7 @@ body {
 .container {
   margin: 0 auto;
   max-width: 1240px;
-  padding: 10px 15px;
+  padding: 0 15px;
 }
 
 body {
@@ -161,14 +161,6 @@ body {
   color: #4E5983;
   font-weight: 300;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -183,7 +175,9 @@ body {
 
 @media (max-width: 500px) {
   .header__item:hover {
-    font-size: 16px;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
   }
 }
 
@@ -281,7 +275,6 @@ body {
 @media (max-width: 500px) {
   .section1 {
     padding-top: 50px;
-    padding-bottom: 30px;
   }
 }
 
@@ -608,6 +601,21 @@ body {
   }
 }
 
+.section2 .container {
+  position: relative;
+}
+
+.section2 .container::before {
+  content: url("../img/2/before.png");
+  position: absolute;
+  left: -50px;
+  bottom: 300px;
+  z-index: -1;
+  -webkit-transform: rotateZ(-20deg);
+      -ms-transform: rotate(-20deg);
+          transform: rotateZ(-20deg);
+}
+
 .advantages {
   display: -webkit-box;
   display: -webkit-flex;
@@ -705,7 +713,6 @@ body {
 
 @media (max-width: 500px) {
   .advantages-block__img {
-    margin-right: -24px;
     margin-bottom: 20px;
   }
 }
@@ -748,17 +755,9 @@ body {
 .advantage:hover {
   -webkit-box-shadow: 0 0 30px -10px;
           box-shadow: 0 0 30px -10px;
-}
-
-.advantage::before {
-  content: url("../img/2/before.png");
-  position: absolute;
-  left: -50px;
-  top: -70px;
-  z-index: -1;
-  -webkit-transform: rotateZ(-20deg);
-      -ms-transform: rotate(-20deg);
-          transform: rotateZ(-20deg);
+  -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 
 .advantage::after {
@@ -842,6 +841,7 @@ body {
   background-color: #ffffff;
   position: relative;
   z-index: 1;
+  margin-bottom: 100px;
 }
 
 @media (max-width: 768px) {
@@ -1047,7 +1047,7 @@ body {
 
 .slider-arrow {
   position: absolute;
-  right: 0;
+  right: 15px;
   bottom: -45px;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -1084,7 +1084,7 @@ body {
 }
 
 .slider-arrow-prev {
-  right: 30px;
+  right: 45px;
   cursor: pointer;
 }
 

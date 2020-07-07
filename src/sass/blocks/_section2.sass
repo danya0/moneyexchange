@@ -12,6 +12,15 @@
     opacity: 0.8
   @include w-mobile
     padding-top: 50px
+  & .container
+    position: relative
+    &::before
+      content: url('../img/2/before.png')
+      position: absolute
+      left: -50px
+      bottom: 300px
+      z-index: -1
+      transform: rotateZ(-20deg)
 .advantages
   display: flex
   justify-content: space-between
@@ -46,7 +55,6 @@
         opacity: 0
         transform: translateX(100px)
       @include w-mobile
-        margin-right: -24px
         margin-bottom: 20px
   &__title
     font-size: 22px
@@ -72,13 +80,7 @@
   transition: 0.3s
   &:hover
     box-shadow: 0 0 30px -10px
-  &::before
-    content: url('../img/2/before.png')
-    position: absolute
-    left: -50px
-    top: -70px
-    z-index: -1
-    transform: rotateZ(-20deg)
+    transform: translateY(-10px)
   &::after
     content: url('../img/2/after.png')
     position: absolute
