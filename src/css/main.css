@@ -175,7 +175,9 @@ body {
 }
 
 .header__item:hover {
-  font-size: 22px;
+  -webkit-transform: scale(1.4);
+      -ms-transform: scale(1.4);
+          transform: scale(1.4);
   color: black;
 }
 
