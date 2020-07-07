@@ -21,6 +21,10 @@
       bottom: 300px
       z-index: -1
       transform: rotateZ(-20deg)
+      @include w-laptop
+        bottom: 100px
+      @include w-mobile
+        display: none
 .advantages
   display: flex
   justify-content: space-between

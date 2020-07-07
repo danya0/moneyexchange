@@ -616,6 +616,18 @@ body {
           transform: rotateZ(-20deg);
 }
 
+@media (max-width: 1024px) {
+  .section2 .container::before {
+    bottom: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  .section2 .container::before {
+    display: none;
+  }
+}
+
 .advantages {
   display: -webkit-box;
   display: -webkit-flex;
