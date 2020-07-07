@@ -664,7 +664,7 @@ body {
   cursor: default;
 }
 
-.advantages-block:hover .advantages-block__img {
+.advantages-block:hover .advantages-block__img.img-hover {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
