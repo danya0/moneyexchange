@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/header */ \"./src/js/modules/header.js\");\n/* harmony import */ var _modules_section1__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/section1 */ \"./src/js/modules/section1.js\");\n/* harmony import */ var _modules_section4__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/section4 */ \"./src/js/modules/section4.js\");\n/* harmony import */ var _modules_paralaxSection1__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/paralaxSection1 */ \"./src/js/modules/paralaxSection1.js\");\n\n\n\n\nObject(_modules_header__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\nObject(_modules_section1__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\nObject(_modules_section4__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\nObject(_modules_paralaxSection1__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/header */ \"./src/js/modules/header.js\");\n/* harmony import */ var _modules_section1__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/section1 */ \"./src/js/modules/section1.js\");\n/* harmony import */ var _modules_section4__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/section4 */ \"./src/js/modules/section4.js\");\n/* harmony import */ var _modules_section1Anim__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/section1Anim */ \"./src/js/modules/section1Anim.js\");\n/* harmony import */ var _modules_section2Anim__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/section2Anim */ \"./src/js/modules/section2Anim.js\");\n\n\n\n\n\nwindow.addEventListener('DOMContentLoaded', function () {\n  Object(_modules_header__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n  Object(_modules_section1__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n  Object(_modules_section4__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n  Object(_modules_section1Anim__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n  Object(_modules_section2Anim__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\n});\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ }),
 
@@ -110,18 +110,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 /***/ }),
 
-/***/ "./src/js/modules/paralaxSection1.js":
-/*!*******************************************!*\
-  !*** ./src/js/modules/paralaxSection1.js ***!
-  \*******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  $(window).bind('scroll', function (e) {\n    parallaxScroll();\n  });\n\n  function parallaxScroll() {\n    var scrolled = $(window).scrollTop();\n    $('.section1-bg').css('top', 0 - scrolled * 0.25 + 'px');\n\n    if (scrolled > 1000) {\n      $('.section1-bg').css('top', '');\n    }\n  }\n});\n\n//# sourceURL=webpack:///./src/js/modules/paralaxSection1.js?");
-
-/***/ }),
-
 /***/ "./src/js/modules/section1.js":
 /*!************************************!*\
   !*** ./src/js/modules/section1.js ***!
@@ -131,6 +119,30 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  var selects = $('.form-input-block__select'),\n      selectItem = $('.select-item');\n  selects.click(function (e) {\n    $(this).toggleClass('select_active');\n    $(this).children('.select__icon').toggleClass('select__icon_active');\n  });\n  selectItem.each(function (index, item) {\n    var currentIcon = $(item).parents('.form-input-block__select').children('.select__header').children('.select__current').children('.select-item-current').children('img'),\n        currentText = $(item).parents('.form-input-block__select').children('.select__header').children('.select__current').children('.select-item-current').children('span');\n    $(item).click(function (e) {\n      currentIcon.attr('src', $(this).children('img').attr('src'));\n      currentText.text($(this).children('span').text());\n      countValue();\n    });\n  });\n  var firstInput = $('.form-input-block:first input'),\n      lastInput = $('.form-input-block:last input');\n  firstInput.change(function (e) {\n    e.preventDefault();\n    countValue();\n  });\n\n  function countValue() {\n    var firstSelect = $('.select-item-current:first span'),\n        lastSelect = $('.select-item-current:last span'),\n        firstInputVal = +firstInput.val(),\n        firstValue = 0,\n        lastValue = 0;\n    var rub = 1,\n        usd = 69,\n        eur = 73;\n\n    if (firstSelect.text() == 'RUB') {\n      firstValue = rub;\n    } else if (firstSelect.text() == 'USD') {\n      firstValue = usd;\n    } else if (firstSelect.text() == 'EUR') {\n      firstValue = eur;\n    }\n\n    if (lastSelect.text() == 'RUB') {\n      lastValue = rub;\n    } else if (lastSelect.text() == 'USD') {\n      lastValue = usd;\n    } else if (lastSelect.text() == 'EUR') {\n      lastValue = eur;\n    }\n\n    lastInput.val((firstInputVal / lastValue * firstValue).toFixed(2));\n  }\n\n  countValue();\n});\n\n//# sourceURL=webpack:///./src/js/modules/section1.js?");
+
+/***/ }),
+
+/***/ "./src/js/modules/section1Anim.js":
+/*!****************************************!*\
+  !*** ./src/js/modules/section1Anim.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  $(window).bind('scroll', function (e) {\n    parallaxScroll();\n  });\n\n  function parallaxScroll() {\n    var scrolled = $(window).scrollTop();\n    $('.section1-bg').css('top', 0 - scrolled * 0.25 + 'px');\n\n    if (scrolled > 1000) {\n      $('.section1-bg').css('top', '');\n    }\n  }\n});\n\n//# sourceURL=webpack:///./src/js/modules/section1Anim.js?");
+
+/***/ }),
+
+/***/ "./src/js/modules/section2Anim.js":
+/*!****************************************!*\
+  !*** ./src/js/modules/section2Anim.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  var images = $('.advantages-block__img');\n  $(window).scroll(function () {\n    if ($(window).scrollTop() > 400) {\n      $(images).removeClass('unvisible');\n    }\n  });\n});\n\n//# sourceURL=webpack:///./src/js/modules/section2Anim.js?");
 
 /***/ }),
 
