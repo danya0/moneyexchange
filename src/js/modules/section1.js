@@ -3,8 +3,8 @@ export default () => {
 		selectItem = $('.select-item');
 
 	selects.click(function (e) {
-		$(this).toggleClass('select_active');
 		$(this).children('.select__icon').toggleClass('select__icon_active');
+		$(this).children('.select__body').slideToggle();
 	});
 
 	selectItem.each((index, item) => {
