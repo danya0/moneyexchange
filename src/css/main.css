@@ -205,8 +205,13 @@ body {
           box-shadow: 0 0 12px -5px;
 }
 
+.header__profile {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .header__profile {
+    display: block;
     height: 24px;
     width: 24px;
     position: absolute;
@@ -595,7 +600,7 @@ body {
   position: absolute;
   display: block;
   content: '';
-  bottom: 101%;
+  bottom: 100%;
   right: 15px;
   width: 7px;
   height: 7px;
