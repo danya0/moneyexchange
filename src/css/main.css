@@ -1384,6 +1384,7 @@ body {
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
   margin-bottom: 15px;
+  z-index: 1;
 }
 
 .footer__subtitle {
