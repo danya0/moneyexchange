@@ -63,6 +63,12 @@ body {
           flex-wrap: wrap;
 }
 
+@media (max-width: 500px) {
+  .header {
+    padding-bottom: 0;
+  }
+}
+
 .header-block {
   display: -webkit-box;
   display: -webkit-flex;
@@ -341,6 +347,12 @@ body {
   }
 }
 
+@media (max-width: 500px) {
+  .form-main {
+    text-align: center;
+  }
+}
+
 .form-main::before {
   content: '';
   position: absolute;
@@ -424,6 +436,12 @@ body {
   opacity: 0.5;
 }
 
+@media (max-width: 500px) {
+  .form__name-small {
+    display: block;
+  }
+}
+
 .form__sum {
   font-size: 16px;
   opacity: 0.5;
@@ -448,9 +466,27 @@ body {
   border-right: 1px solid #cfd4da;
 }
 
+@media (max-width: 500px) {
+  .form-input-block input {
+    width: 50%;
+  }
+}
+
 .form-input-block__select {
   width: 40%;
   position: relative;
+}
+
+@media (max-width: 500px) {
+  .form-input-block__select {
+    width: 45%;
+  }
+}
+
+@media (max-width: 320px) {
+  .form-input-block__select {
+    width: 50%;
+  }
 }
 
 .form__button {
@@ -513,12 +549,6 @@ body {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-}
-
-@media (max-width: 320px) {
-  .select__icon {
-    display: none;
-  }
 }
 
 .select__icon_active {
@@ -1296,6 +1326,17 @@ body {
 }
 
 .footer-logo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
   margin-bottom: 15px;
 }
 
@@ -1337,6 +1378,7 @@ body {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  text-align: center;
 }
 
 @media (max-width: 500px) {
@@ -1350,9 +1392,9 @@ body {
 }
 
 .footer-block:nth-child(3) {
-  -webkit-flex-basis: 10%;
-      -ms-flex-preferred-size: 10%;
-          flex-basis: 10%;
+  -webkit-flex-basis: 8%;
+      -ms-flex-preferred-size: 8%;
+          flex-basis: 8%;
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
