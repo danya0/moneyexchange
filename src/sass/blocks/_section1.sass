@@ -180,13 +180,37 @@
       margin-right: 18px
     &:hover
       background-color: rgba($mainColor, 0.1)
+    &:first-child
+      &::before
+        position: absolute
+        display: block
+        content: ''
+        bottom: 101%
+        right: 15px
+        width: 7px 
+        height: 7px
+        margin-bottom: -4px
+        border-top: 1px solid $mainColor
+        border-left: 1px solid $mainColor
+        background: #fff
+        transform: rotate(45deg)
+      &:hover:before
+        background: #f2edff
   &__body
-    display: none
+    display: block
     position: absolute
     z-index: 2
+    transform: translateY(5px)
     left: 0
     right: 0
     top: 100%
     background-color: #fff
     border: 1px solid $mainColor
-    border-top: none
+    opacity: 0
+    visibility: hidden
+    transform: translateY(-10px)
+    transition: 0.4s
+    &.opened
+      opacity: 1
+      visibility: visible
+      transform: translateY(0)

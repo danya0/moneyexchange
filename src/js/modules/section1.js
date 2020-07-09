@@ -3,8 +3,13 @@ export default () => {
 		selectItem = $('.select-item');
 
 	selects.click(function (e) {
+		$('html').one('click', function () {
+			$('.select__body').removeClass('opened');
+			$('.select__icon').removeClass('select__icon_active');
+		});
 		$(this).children('.select__icon').toggleClass('select__icon_active');
-		$(this).children('.select__body').slideToggle();
+		$(this).children('.select__body').toggleClass('opened');
+		event.stopPropagation();
 	});
 
 	selectItem.each((index, item) => {
