@@ -11,15 +11,11 @@ export default () => {
 		let currentIcon = $(item)
 				.parents('.form-input-block__select')
 				.children('.select__header')
-				.children('.select__current')
-				.children('.select-item-current')
-				.children('img'),
+				.find('img'),
 			currentText = $(item)
 				.parents('.form-input-block__select')
 				.children('.select__header')
-				.children('.select__current')
-				.children('.select-item-current')
-				.children('span');
+				.find('span');
 
 		$(item).click(function (e) {
 			currentIcon.attr('src', $(this).children('img').attr('src'));
